@@ -1,0 +1,21 @@
+{
+  "name": "maquettes-ohmyfood",
+  "version": "1.0.0",
+  "description": "\"site ohmyfood\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/main.css",
+    "menu": "sass --watch ./sass/menu.scss:./public/css/menu.css"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedcar97/ohmyfood.git"
+  },
+  "author": "Cedcar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cedcar97/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/cedcar97/ohmyfood#readme"
+}

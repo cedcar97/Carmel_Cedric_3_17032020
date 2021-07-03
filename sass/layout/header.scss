@@ -1,0 +1,25 @@
+header
+{   
+    
+   
+    @include mise_en_page_section;
+    height: 44px;
+    flex-flow: column wrap;
+    align-content: center;
+    box-sizing: border-box;
+   padding-bottom: 10px;
+   & i
+   {
+      position: absolute;
+      left: 20px;
+       
+        
+       
+    
+
+   }
+   
+    
+   
+
+}

@@ -1,0 +1,175 @@
+@import"../sass/utils/variables.scss";
+@import"../sass/utils/mixins.scss";
+@import"../sass/layout/header.scss";
+@import"../sass/layout/footer.scss";
+@import"../sass/Base/Body.scss";
+@import"../sass/components/Buttons.scss";
+
+.bckg--color
+{
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    bottom: 70px;
+}
+
+.imgMenu
+{
+@include mise_en_page_section;
+height: 400px;
+align-items: center;
+overflow: hidden;
+z-index: -1;
+
+& img
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+}
+.Menu
+{
+    @include mise_en_page_section;
+    flex-flow: row wrap;
+    
+    align-items: center;
+    
+    
+    &-Titre
+    {
+        display: flex;
+        width: 100%;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: bolder;
+
+        & i
+        {
+            
+            font-size: 2.5rem;
+        }
+    }
+
+    &-steps
+    {
+        width: 90%;
+        
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: flex-start;
+
+        & h3
+        {
+           
+
+           width: 35px;
+            border-bottom: $color-tertiary 2px solid;
+            font-weight: normal;
+            margin-right: 80%;
+        }
+
+        &-box
+        {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 80%;
+            box-shadow: 3px 3px 3px #e5e5e5;
+            
+            @include marge-entrbloc;
+            border-radius: 30px;
+            
+            
+            overflow:hidden;
+            
+           
+
+            &-meal
+            {
+
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: flex-start;
+                border-radius: 30px;
+                height: 100px;
+                width: 100%;
+                background-color: white;
+                margin-right: 1%;
+                overflow: hidden;
+                line-height: 1px;
+                text-align: start;
+                flex-shrink: 0;
+
+                &-p1
+                {
+                    width: 50%;
+                    text-align: left;
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                }
+    
+                &-p2 
+                {
+                    width: 50%;
+                    text-align: right;
+                    box-sizing: border-box;
+                    padding-right: 15px;
+    
+                }
+    
+                
+            }
+            
+            &-valid
+                {   
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 70px;
+                    height: 100px;
+                    background-color: $color-tertiary;
+                    border-radius: 0px 20px 20px 0px;
+                    z-index: 15;
+                    flex-shrink:0 ;
+                    
+                    
+                    
+                    
+                    
+    
+                    
+                    & i
+                    {
+                        color: white;
+                    }
+       
+                }
+
+            & h4
+            {
+                width: 100%;
+                text-align: start;
+                padding-left: 15px;
+                font-size: map-get($map: $font-size, $key:x-large );
+                margin-bottom: 0px;
+            }
+
+           
+            
+        }
+    }
+}
+
+.color
+{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}

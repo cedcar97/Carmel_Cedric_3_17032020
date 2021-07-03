@@ -1,0 +1,46 @@
+@mixin police-color1($color){
+    
+    @if ($color==$color-tertiary)
+    {
+        $color: darken($color,30%);
+    } 
+    @else{
+         $color: $color-police-button;
+    }     
+color:$color;    
+}
+
+
+
+
+
+@mixin color-dégradé{
+background:linear-gradient($color-secondary,$color-primary);
+
+}
+@mixin marge-entrsection {
+margin-bottom: 4rem;       
+   }
+@mixin marge-entrbloc {
+margin-bottom: 2rem;       
+}
+@mixin mise_en_page {
+width: 100%;
+text-align: center;
+vertical-align: middle;   
+}
+
+@mixin mise_en_page2{
+vertical-align: middle;   
+width: 100%;
+text-align: left;
+}
+@mixin mise_en_page_section {
+display: flex;
+justify-content: center;
+
+width: 100%;
+}
+@mixin espacement{
+padding-left: 15px;   
+}

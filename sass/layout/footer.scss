@@ -1,0 +1,36 @@
+.pied-page
+    {   
+        @include mise_en_page_section();
+        background-color:#353535 ;
+        @include police-color1($color-primary);
+        padding-top: 30px;
+        @include espacement();
+        padding-bottom: 30px;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        
+        
+        & img
+        {
+            background-image:"../../images/logo/ohmyfood@2xv2.svg";
+            
+
+           
+            
+        }
+
+        &-p
+        {   
+            display: flex;
+            flex-flow: row nowrap;
+            
+            align-items: center;
+            width: 100%;
+
+           & i
+           {
+               width: 2rem;
+           }
+
+        }
+    }

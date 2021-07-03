@@ -1,0 +1,229 @@
+
+
+@font-face
+{
+font-family: "Titillium";
+
+src: url("../Titillium/Titillium-Regular.ttf") ; 
+font-style: normal;
+font-weight: 50;
+}
+
+
+@import"../sass/utils/variables.scss";
+@import"../sass/utils/mixins.scss";
+@import"../sass/layout/header.scss";
+@import"../sass/layout/footer.scss";
+@import"../sass/Base/Body.scss";
+@import"../sass/components/Buttons.scss";
+
+
+
+.title
+{
+
+    @include mise_en_page_section();
+align-items: center;
+flex-flow: column nowrap;
+@include marge-entrsection();
+font-size: map-get($map: $font-size , $key:x-large );
+
+&-intro
+{   
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    
+ 
+ &-location
+ {  
+    
+     background-color: #eaeaea;
+    @include mise_en_page;
+    color: #353535;
+    
+    & i
+    {
+        padding-right: 20px;
+    }
+ }
+  &--lightbckg
+  { background-color: #f6f6f6;
+    @include mise_en_page; 
+    padding-bottom: 50px;
+
+    & h2
+    {   
+        font-size: map-get($map: $font-size , $key:xx-large );
+        font-weight: bolder;
+    }
+
+    & p
+    {
+        color:#353535;
+        font-weight: lighter;
+    }
+  }
+}
+
+}
+
+
+.Fonctionnement
+{
+    @include mise_en_page_section();
+    @include mise_en_page2;
+    font-size: map-get($map: $font-size , $key:x-large );
+    
+    align-items: center;
+    flex-flow: column nowrap;
+    @include marge-entrsection();
+    &-steps
+    {  display: flex;
+        height: 80px;
+        
+        width: 90%;
+        flex-flow: row nowrap;
+        
+        border-radius: 30px;
+        align-items: center;
+        background-color: #f6f6f6;
+        box-shadow: 3px 3px 3px #e5e5e5;
+        @include marge-entrbloc();
+        & i
+        {
+            
+            text-align: center;
+          font-size: 25px; 
+          color: $color-icon;
+          padding-right: 15px;
+          
+        }
+       & p
+       { 
+          
+        
+        
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold; 
+        white-space: nowrap;
+        
+       
+       }
+       &-circle
+       {    display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            height: 30px;
+           width: 30px;
+           border-radius: 50%;
+
+           background-color: $color-primary;
+           @include police-color1($color-primary);
+           position:relative;
+           right: 15px;
+           font-size: map-get($map: $font-size , $key:large );
+           
+       }
+    }  
+    & h2
+    {   
+        width: 80%;
+    }
+
+   
+
+}
+
+.Restaurants
+    {
+        
+    @include mise_en_page2;
+    @include mise_en_page_section();
+    align-items: center;
+    flex-flow: column nowrap;
+    font-size: map-get($map: $font-size , $key:x-large );
+    @include marge-entrsection();
+    
+    &-card
+    {   display: flex;
+        width: 90%;
+        
+        height: 330px;
+        background-color: #FFF;
+        @include marge-entrbloc();
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        box-shadow: 3px 3px 3px #e5e5e5;
+        
+        
+        
+        border-radius: 20px;
+        & i 
+        {   
+            
+            
+            line-height: 60px;
+            font-size: map-get($map: $font-size , $key:xx-large );
+            
+            padding-right: 30px;
+            color: $color-icon;
+        }
+        & h3
+        {   width: 60%;
+            text-align: left;
+            box-sizing: border-box;
+            font-size: map-get($map: $font-size , $key:x-large );
+           
+            line-height: 10px;
+            @include espacement();
+
+        }
+        & p
+            
+        {   display: flex;
+            
+            width: 100%;
+            margin-top: 0px;
+            font-size: map-get($map: $font-size , $key:x-large );
+            line-height: 0px;
+            
+            box-sizing: border-box;
+            @include espacement();
+           
+            font-weight: lighter;
+            
+            
+
+        }
+        &-img
+        {display: flex;
+         width: 100%;
+         height: 70%;
+         overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px 20px 0px 0px;
+            
+         & img 
+         {
+            width: 100%;
+            height: auto;  
+         }
+    
+        } 
+    }
+    & h2
+    {
+        width: 80%;
+    }
+    }
+
+   
+
+
+    
