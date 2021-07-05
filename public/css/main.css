@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Titillium";
   src: url("../Titillium/Titillium-Regular.ttf");
@@ -63,6 +64,13 @@ body {
   border: none;
   font-size: x-large;
   box-shadow: 3px 3px 3px #d1d1d1;
+  opacity: 1;
+}
+.color:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity box-shadow 0.3s ease-in-out;
+  box-shadow: 3px 3px 3px #616161;
 }
 .color--green {
   display: flex;
@@ -80,6 +88,21 @@ body {
   position: relative;
   bottom: 280px;
   border-radius: 3px;
+}
+.color--dégradé::before {
+  content: "";
+  opacity: 0.5;
+  font-weight: normal;
+  -webkit-text-fill-color: black;
+  background: white;
+}
+.color--dégradé:hover::before {
+  opacity: 1;
+  font-weight: 900;
+  transition: opacity 0.3s ease-in-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .title {

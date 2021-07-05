@@ -14,10 +14,8 @@ color:$color;
 
 
 
-@mixin color-dégradé{
-background:linear-gradient($color-secondary,$color-primary);
 
-}
+
 @mixin marge-entrsection {
 margin-bottom: 4rem;       
    }
