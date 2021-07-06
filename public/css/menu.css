@@ -39,8 +39,14 @@ header i {
   width: 2rem;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../roboto/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 50;
+}
 body {
-  font-family: "Titillium";
+  font-family: "Roboto";
   font-size: large;
   margin: auto;
 }
@@ -85,7 +91,7 @@ body {
 }
 .color--dégradé::before {
   content: "";
-  opacity: 0.5;
+  opacity: 0.8;
   font-weight: normal;
   -webkit-text-fill-color: black;
   background: white;
@@ -97,6 +103,7 @@ body {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  cursor: pointer;
 }
 
 .bckg--color {
@@ -178,18 +185,35 @@ body {
   line-height: 1px;
   text-align: start;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .Menu-steps-box-meal-p1 {
+  display: inline-block;
   width: 80%;
   text-align: left;
   box-sizing: border-box;
   padding-left: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .Menu-steps-box-meal-p2 {
   width: 20%;
   text-align: right;
   box-sizing: border-box;
   padding-right: 15px;
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+.Menu-steps-box-meal:hover + .Menu-steps-box-valid {
+  transform: translateX(-100%);
+}
+.Menu-steps-box-meal:hover + .Menu-steps-box-valid i {
+  transform: rotate(2turn);
+}
+.Menu-steps-box-meal:hover .Menu-steps-box-meal-p2 {
+  width: 20%;
+  max-width: 1000px;
+  transform: translateX(-70%);
 }
 .Menu-steps-box-valid {
   display: flex;
@@ -201,11 +225,16 @@ body {
   border-radius: 0px 20px 20px 0px;
   z-index: 15;
   flex-shrink: 0;
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
 }
 .Menu-steps-box-valid i {
   color: white;
+  transform: rotate(0turn);
+  transition: transform 0.5s ease-in-out;
 }
 .Menu-steps-box h4 {
+  display: inline-block;
   width: 100%;
   text-align: start;
   padding-left: 15px;

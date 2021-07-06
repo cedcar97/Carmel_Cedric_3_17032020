@@ -43,7 +43,7 @@ border-radius: 3px;
     &::before
     {
         content: "";
-       opacity: 0.5;
+       opacity: 0.8;
       
         font-weight: normal;
         -webkit-text-fill-color:black;
@@ -61,6 +61,7 @@ border-radius: 3px;
         background: linear-gradient($color-secondary,$color-primary);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        cursor: pointer;
         
         
     }

@@ -1,6 +1,17 @@
+@font-face
+{
+font-family: "Roboto";
+
+src: url("../roboto/Roboto-Regular.ttf") ; 
+font-style: normal;
+font-weight: 50;
+}
+
+
+
 body
 {   
-font-family: "Titillium";
+font-family: "Roboto";
    font-size: map-get($map: $font-size , $key:large );
    margin: auto; 
 }

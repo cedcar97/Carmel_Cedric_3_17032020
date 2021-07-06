@@ -106,13 +106,21 @@ z-index: -1;
                 line-height: 1px;
                 text-align: start;
                 flex-shrink: 0;
+                cursor: pointer;
+                
+                
 
                 &-p1
                 {
+                    display: inline-block;
                     width: 80%;
                     text-align: left;
                     box-sizing: border-box;
                     padding-left: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    
+                    
                 }
     
                 &-p2 
@@ -121,10 +129,41 @@ z-index: -1;
                     text-align: right;
                     box-sizing: border-box;
                     padding-right: 15px;
+                    transform: translateX(0%);
+                    transition: transform 0.5s ease-in-out;
+
+                    
     
                 }
-    
+
                 
+                
+                &:hover 
+                {
+                    & +  .Menu-steps-box-valid 
+                    {
+
+                    transform: translateX(-100%) ;
+                    
+                    
+                     & i
+                     {
+                        transform: rotate(2turn);
+                        }
+
+                    }
+                    
+                    &  .Menu-steps-box-meal-p2
+                    {   
+                        width: 20%;
+                        max-width: 1000px;
+                        transform: translateX(-70%) ;
+                        
+                    }
+
+                   
+                   
+                }
             }
             
             &-valid
@@ -139,27 +178,28 @@ z-index: -1;
                     border-radius: 0px 20px 20px 0px;
                     z-index: 15;
                     flex-shrink:0 ;
-                    
-                    
-                    
-                    
-                    
-    
+                    transform: translateX(0%);
+                    transition: transform 0.5s ease-in-out;
                     
                     & i
                     {
                         color: white;
+                        transform: rotate(0turn);
+                        transition: transform 0.5s ease-in-out;
+                        
                     }
        
                 }
 
             & h4
-            {
+            {   
+                display: inline-block;
                 width: 100%;
                 text-align: start;
                 padding-left: 15px;
                 font-size: map-get($map: $font-size, $key:x-large );
                 margin-bottom: 0px;
+                
             }
 
            
