@@ -10,7 +10,6 @@
 @import"../sass/components/Buttons.scss";
 
 
-
 .title
 {
 
@@ -101,7 +100,10 @@ font-size: map-get($map: $font-size , $key:x-large );
         font-size: 20px;
         font-weight: bold; 
         white-space: nowrap;
-        
+        @media screen and (max-width:350px){
+            font-size: map-get($map: $font-size, $key:medium );
+            
+        }
        
        }
        &-circle
@@ -123,7 +125,7 @@ font-size: map-get($map: $font-size , $key:x-large );
     }  
     & h2
     {   
-        width: 80%;
+        width: 90%;
     }
 
    
@@ -132,19 +134,38 @@ font-size: map-get($map: $font-size , $key:x-large );
 
 .Restaurants
     {
-        
+       
     @include mise_en_page2;
     @include mise_en_page_section();
+    justify-content: center;
     align-items: center;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     font-size: map-get($map: $font-size , $key:x-large );
     @include marge-entrsection();
-    
+    @media screen and (min-width:1050px){
+        justify-content: space-around;
+    }
+
+    & a{
+        display: flex;
+        height: 330px;
+        width: 90%;
+        justify-content: center;
+        text-decoration: none;
+        color: #000;
+        @media screen and (min-width:1050px){
+            max-width: 500px;
+        }
+        
+
+       
+        }
     &-card
     {   display: flex;
-        width: 90%;
         
-        height: 330px;
+        
+        
+       
         background-color: #FFF;
         @include marge-entrbloc();
         flex-flow: row wrap;
@@ -153,17 +174,16 @@ font-size: map-get($map: $font-size , $key:x-large );
         box-shadow: 3px 3px 3px #e5e5e5;
         
         
-        
         border-radius: 20px;
         & i 
         {   
             
-            
-            line-height: 60px;
+            box-sizing: border-box;
+            padding-top: 10px;
             font-size: map-get($map: $font-size , $key:xx-large );
             
-            padding-right: 30px;
-            color: $color-icon;
+            
+            
         }
         & h3
         {   width: 60%;
@@ -173,7 +193,10 @@ font-size: map-get($map: $font-size , $key:x-large );
            
             line-height: 10px;
             @include espacement();
-
+            @media screen and (max-width:425px){
+                font-size: map-get($map: $font-size, $key:large );
+                
+            }
         }
         & p
             
@@ -188,7 +211,10 @@ font-size: map-get($map: $font-size , $key:x-large );
             @include espacement();
            
             font-weight: lighter;
-            
+            @media screen and (max-width:425px){
+                font-size: map-get($map: $font-size, $key:large );
+                
+            }
             
 
         }
@@ -201,21 +227,37 @@ font-size: map-get($map: $font-size , $key:x-large );
             justify-content: center;
             border-radius: 20px 20px 0px 0px;
             
-         & img 
+         &-1 
          {
             width: 100%;
             height: auto;  
+            @media screen and (max-width:360px){
+                width: auto;
+                height: 100%;   
+            }
          }
-    
+         
+         &-2 
+         {
+            width: 100%;
+            height: auto; 
+         }
         } 
     }
     & h2
     {
-        width: 80%;
+        width: 90%;
+        
+        
     }
     }
 
    
-
+    .heart-anim
+    {
+        box-sizing: border-box;
+        margin-right: 30px;
+        
+    }
 
     
