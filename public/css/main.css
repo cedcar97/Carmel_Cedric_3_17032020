@@ -48,7 +48,7 @@
   padding-left: 5%;
 }
 .pied-page img {
-  background-image: "../../images/logo/ohmyfood@2xv2.svg";
+  background-image: url("../../images/logo/ohmyfood@2xv2.svg");
 }
 .pied-page-p {
   display: flex;
@@ -220,10 +220,10 @@ body {
 
 @keyframes heart-t {
   0% {
-    transform: translateY(-70%) scale(0%);
+    transform: translateY(-0.7) scale(0);
   }
   100% {
-    transform: translateY(-100%) scale(100%);
+    transform: translateY(-1) scale(1);
   }
 }
 @keyframes heart-o {
