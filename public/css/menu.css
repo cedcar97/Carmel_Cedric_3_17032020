@@ -220,10 +220,10 @@ body {
 
 @keyframes heart-t {
   0% {
-    transform: translateY(-70%) scale(0%);
+    transform: translateY(-70%) scale(0);
   }
   100% {
-    transform: translateY(-100%) scale(100%);
+    transform: translateY(-100%) scale(1);
   }
 }
 @keyframes heart-o {
