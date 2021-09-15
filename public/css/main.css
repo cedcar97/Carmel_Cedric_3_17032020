@@ -192,15 +192,14 @@ body {
   opacity: 1;
   font-weight: normal;
   color: black;
-  background-color: #f6f6f6;
-  -webkit-background-clip: text;
 }
 .color--dégradé:hover {
   animation: heart-o 1s ease-in-out both;
   cursor: pointer;
 }
 .color--dégradé:hover + .color--dégradé-1 {
-  animation: heart-t 1.3s ease-in-out both;
+  animation: heart-t 0.7s ease-in-out both;
+  animation-fill-mode: forwards;
 }
 .color--dégradé-1 {
   background: linear-gradient(#ff79da, #9356dc);
@@ -216,6 +215,20 @@ body {
   width: 40px;
   height: 40px;
   overflow: hidden;
+}
+.heart-anim-1 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+@media screen and (max-width: 400px) {
+  .heart-anim-1 {
+    height: 30px;
+  }
 }
 
 @keyframes heart-t {

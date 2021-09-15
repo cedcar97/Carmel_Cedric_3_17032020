@@ -55,16 +55,16 @@ margin-left: 85%;
       
         font-weight: normal;
         color:black;
-        background-color:#f6f6f6; 
-        -webkit-background-clip: text;
-       
+        
        
        &:hover{
         animation: heart-o 1s ease-in-out both;
         cursor: pointer;
 
         &+ .color--dégradé-1{
-            animation: heart-t 1.3s ease-in-out both;
+            
+            animation: heart-t 0.7s ease-in-out both;
+            animation-fill-mode: forwards;
             
         }
        }
@@ -98,6 +98,20 @@ align-items: flex-start;
  height: 40px;
 overflow: hidden; 
 
+&-1{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 40px;
+    height: 40px;
+    overflow: hidden; 
+    @media screen and (max-width:400px)
+    {
+
+        height: 30px;
+    }
+}
 
 } 
 
